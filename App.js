@@ -4,6 +4,7 @@ import Lab5 from './Lab5.js'
 import cors from "cors";
 import CourseRoutes from "./Kanbas/courses/routes.js";
 import ModuleRoutes from "./Kanbas/modules/routes.js";
+import AssignmentsRoutes from './Kanbas/assignments/routes.js';
 
 
 const app = express()
@@ -13,4 +14,5 @@ Hello(app)
 Lab5(app)
 CourseRoutes(app)
 ModuleRoutes(app)
-app.listen(4000)
+AssignmentsRoutes(app)
+app.listen(process.env.PORT || 4000);
